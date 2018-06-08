@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Point } from '../../domain';
+import { Point } from '../../domain.types';
 
 export type PunchCardRowValue = {
     points: Point[];
