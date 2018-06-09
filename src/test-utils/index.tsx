@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Point } from './../domain';
+import { Point } from '../domain.types';
 import { BaseDriver, createBaseDriver } from './base-driver';
 
 export * from './base-driver';
