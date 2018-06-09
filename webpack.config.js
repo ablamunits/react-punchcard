@@ -25,6 +25,10 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'demo', 'build')
   },
+  devServer: {
+    contentBase: './demo'
+  },
+  performance: { hints: false },
   externals: {
       "react": "React",
       "react-dom": "ReactDOM"
