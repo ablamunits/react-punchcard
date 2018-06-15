@@ -22,8 +22,9 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'demo', 'build')
+    filename: './index.js',
+    path: path.resolve(__dirname, 'demo', 'build'),
+    publicPath: '/build'
   },
   devServer: {
     contentBase: './demo'
