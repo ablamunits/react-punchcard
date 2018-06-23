@@ -6,8 +6,10 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf dist && tsc -p .",
-    "build-demo": "rm -rf ./demo/build && webpack",
+    "build": "rm -rf dist && tsc -p . && npm run build-style",
+    "build-demo": "rm -rf ./demo/build && webpack && npm run build-demo-style",
+    "build-style": "node-sass --output-style compressed src/style.scss > dist/style.css",
+    "build-demo-style": "node-sass src/style.scss > demo/build/style.css",
     "start": "webpack-dev-server --open"
   },
   "author": "",
@@ -17,10 +19,13 @@
     "react-dom": "^16.4.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.4",
     "@types/jest": "^23.0.0",
     "@types/react": "^16.3.17",
     "@types/react-dom": "^16.0.6",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.1.0",
+    "node-sass": "^4.9.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "ts-jest": "^22.4.6",
@@ -33,18 +38,7 @@
     "webpack-command": "^0.2.1",
     "webpack-dev-server": "^3.1.4"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+  "dependencies": {
+    "classnames": "^2.2.6"
   }
 }

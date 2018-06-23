@@ -1,0 +1,17 @@
+.punch-card-row {
+    background: red;
+    display: flex;
+
+    .punch-card-row-label {
+        color: green;
+    }
+
+    .punch-card-dot-container {
+        display: flex;
+
+        .punch-card-dot {
+            background: yellow;
+            border-radius: 50%;
+        }
+    }
+}

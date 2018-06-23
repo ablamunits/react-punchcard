@@ -14,9 +14,10 @@ module.exports = function(wallaby) {
       testFramework: 'jest',
       debug: false,
   
-      setup: function (wallaby) {
-        var jestConfig = require('./package.json').jest;
-        wallaby.testFramework.configure(jestConfig);
-      }
+      // setup: function (wallaby) {
+      //   var jestConfig = require('./jest.config.js');
+      //   console.log(jestConfig);
+      //   wallaby.testFramework.configure(jestConfig);
+      // }
     };
   }
