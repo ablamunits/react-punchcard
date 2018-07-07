@@ -1,17 +1,38 @@
+$row-height: 70px;
+$dot-color: black;
+
+$min-dot-size: 5px;
+
 .punch-card-row {
-    background: red;
     display: flex;
+    border-bottom: 1px solid gray;
+    height: $row-height;
+    position: relative;
+    margin-bottom: 15px;
 
     .punch-card-row-label {
-        color: green;
+        position: absolute;
     }
 
     .punch-card-dot-container {
         display: flex;
+        flex: 1;
+        align-items: center;
+        margin: 0 20px;
+        justify-content: space-between;
 
-        .punch-card-dot {
-            background: yellow;
-            border-radius: 50%;
+        .dot-wrapper {
+            margin: auto;
+
+            .punch-card-dot {
+                width: $min-dot-size;
+                height: $min-dot-size;
+                background: $dot-color;
+                border-radius: 50%;
+                display: flex;
+                will-change: transform;
+                transition: transform .5s ease-in-out;
+            }
         }
     }
 }

@@ -13,7 +13,8 @@
         "no-trailing-whitespace": true,
         "trailing-comma": [true, {"singleline": "never"}],
         "ordered-imports": false,
-        "object-literal-sort-keys": false
+        "object-literal-sort-keys": false,
+        "indent": true
     },
     "rulesDirectory": []
 }

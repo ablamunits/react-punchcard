@@ -23,6 +23,20 @@ describe('PunchCardRow', () => {
         expect(count).toBe(5);
     });
 
+    it('Shows 3 dots with size differences', () => {
+        const points = [
+            {x: 1, y: 200},
+            {x: 2, y: 100},
+            {x: 3, y: 20}
+        ];
+
+        const value = {points};
+        const driver = setup({value});
+
+        expect(driver.getDotScale(0)).toBeGreaterThan(driver.getDotScale(1));
+        expect(driver.getDotScale(1)).toBeGreaterThan(driver.getDotScale(2));
+    });
+
     it('Shows row label', () => {
         const label = 'This is a row label';
         const value = {...defaultProps.value, label};

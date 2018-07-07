@@ -1,4 +1,14 @@
 .punch-card {
     @import './punch-card-row/style';
+
+    .punch-card-axis {
+        display: flex;
+        margin: 0 20px;
+
+        .punch-card-axis-tick {
+            flex: 1;
+            text-align: center;
+        }
+    }
 }
 

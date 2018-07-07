@@ -2,6 +2,7 @@ export type BaseDriver = {
     $: (selector: string) => BaseDriver;
     $$: (selector: string) => BaseDriver[];
     text: () => string;
+    getAttribute: (attr: string) => string;
 };
 
 export const createBaseDriver = (elem: Element): BaseDriver => {
@@ -22,6 +23,7 @@ export const createBaseDriver = (elem: Element): BaseDriver => {
                 throw new Error(`Did not find any elements with selector ${selector}`);
             }
         },
-        text: () => elem.textContent
+        text: () => elem.textContent,
+        getAttribute: (attr: string) => elem.getAttribute(attr) || ''
     };
 };
