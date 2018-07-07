@@ -9,7 +9,8 @@
     "build": "rm -rf dist && tsc -p . && npm run build-style",
     "build-demo": "rm -rf ./demo/build && webpack && npm run build-demo-style",
     "build-style": "node-sass --output-style compressed src/style.scss > dist/style.css",
-    "build-demo-style": "node-sass --watch src/style.scss demo/build/style.css",
+    "build-demo-style": "node-sass src/style.scss demo/build/style.css",
+    "watch-style": "node-sass --watch src/style.scss demo/build/style.css",
     "start": "webpack-dev-server --open"
   },
   "author": "",
