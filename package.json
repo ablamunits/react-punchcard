@@ -4,6 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/ablamunits/react-punchcard"
+  },
   "scripts": {
     "test": "jest",
     "build": "rm -rf dist && tsc -p . && npm run build-style",
